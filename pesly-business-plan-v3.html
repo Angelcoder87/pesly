@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: A4; margin: 22mm 20mm; @bottom-center { content: "Pesly Business Plan v3 · September 2026 · Confidential"; font-size: 8pt; color: #8FA69B; font-family: Helvetica, Arial, sans-serif; } }
+  body { font-family: Helvetica, Arial, sans-serif; color: #1a2b23; font-size: 10.5pt; line-height: 1.55; }
+  h1 { font-size: 26pt; margin: 0 0 4pt 0; color: #041F14; letter-spacing: -0.5pt; }
+  h2 { font-size: 15pt; color: #041F14; margin: 22pt 0 6pt 0; border-bottom: 2pt solid #00A868; padding-bottom: 3pt; page-break-after: avoid; }
+  h3 { font-size: 11.5pt; color: #006B42; margin: 14pt 0 4pt 0; page-break-after: avoid; }
+  p { margin: 5pt 0; }
+  .cover { background: #021711; color: #EAFBF2; padding: 0; margin: -22mm -20mm 18mm -20mm; padding: 40mm 20mm 18mm 20mm; }
+  .cover h1 { color: #FFFFFF; font-size: 34pt; margin-bottom: 6pt; }
+  .cover .tag { color: #7DF5C0; font-size: 13pt; margin-bottom: 22pt; }
+  .cover .meta { color: #7FA895; font-size: 9pt; }
+  .cover .em { color: #7DF5C0; }
+  table { width: 100%; border-collapse: collapse; margin: 8pt 0 12pt 0; font-size: 9.5pt; page-break-inside: avoid; }
+  th { background: #041F14; color: #EAFBF2; text-align: left; padding: 6pt 8pt; font-size: 9pt; }
+  td { border-bottom: 0.5pt solid #cfe3d9; padding: 5.5pt 8pt; vertical-align: top; }
+  .callout { background: #F2FBF6; border-left: 3pt solid #00A868; padding: 9pt 12pt; margin: 10pt 0; }
+  .dark-callout { background: #041F14; color: #EAFBF2; border-left: 3pt solid #7DF5C0; padding: 9pt 12pt; margin: 10pt 0; }
+  .dark-callout b, .dark-callout strong { color: #7DF5C0; }
+  ul { margin: 4pt 0 8pt 0; padding-left: 16pt; }
+  li { margin: 2.5pt 0; }
+  .small { font-size: 8.5pt; color: #5a7268; }
+  .kicker { color: #00A868; font-size: 9pt; text-transform: uppercase; letter-spacing: 1.5pt; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="kicker">Business Plan · Version 3</div>
+  <h1>Pesly</h1>
+  <div class="tag">Financial Intelligence for Vehicle-Based Work — <span class="em">powered by AI-collected evidence</span></div>
+  <div class="meta">September 2026 · Nairobi, Kenya · Founder: Angela Odhiambo<br>Revision basis: AI-first data acquisition, driver-independent evidence collection, revised monetization analysis</div>
+</div>
+
+<h2>1. Executive Summary</h2>
+<p>Pesly is an intelligence layer for Kenya's ride-hailing economy that answers one question with proof: <b>what did this vehicle really earn, and where did the money go?</b></p>
+<p>Version 3 changes how Pesly knows the answer. Previous versions relied on drivers and owners self-reporting their numbers. V3 makes <b>AI the primary data collector</b>: Pesly gathers evidence directly from the driver's own digital exhaust — platform statements in their email, M-Pesa transaction records, phone notifications, receipts — without depending on anyone typing numbers in. Every figure carries an evidence status. When a driver disagrees with the numbers, the system doesn't ask them to re-enter data — it shows them the underlying receipts.</p>
+<div class="dark-callout"><b>The core insight:</b> if drivers enter the data, Pesly is only a digitized version of today's problem — one party's word against another's. By having AI independently collect the evidence, Pesly becomes a real solution: machine-gathered, multi-source, verifiable truth.</div>
+<p><b>Revenue model:</b> vehicle owners pay a subscription per vehicle (KSh 300–500/vehicle/month, tiered). Drivers use the core product free, with an optional KSh 100/month "Pesly Plus" premium tier for dispute evidence packs and verified income records. Regulatory position unchanged: Pesly is an intelligence tool, not a transport network company.</p>
+
+<h2>2. The Problem — And Why Digitizing It Isn't Enough</h2>
+<p>Kenya's ride-hailing economy (Uber, Bolt, Little, plus boda bodas) runs on a trust gap between vehicle owners and drivers. The owner sees a car and a weekly handover of cash; the driver sees expenses the owner doesn't believe. Every disagreement is one person's word against another's. Splits are disputed, shortfalls are blamed on "few trips," and relationships decay.</p>
+<p>Existing solutions fail because they all make the driver the data-entry clerk:</p>
+<ul>
+<li><b>Pen-and-paper logbooks</b> — self-reported, unverifiable, ignored in disputes.</li>
+<li><b>Driver bookkeeping apps</b> — digital versions of the same self-reported claims. If the driver enters the numbers, the numbers are still just claims. The dispute problem is untouched, merely typed.</li>
+<li><b>GPS trackers (Cartrack, TrackAlways)</b> — telemetry without financial truth; they know where the car went, not what it earned or what it cost to run.</li>
+</ul>
+<div class="callout"><b>The gap in the market:</b> nobody independently collects the financial evidence. Platform statements, M-Pesa records, and expense receipts already exist on every driver's phone. They're just scattered, unread, and unusable in a dispute. Pesly's job is to read them — automatically.</div>
+
+<h2>3. The V3 Solution — AI as the Source of Truth</h2>
+<p>Pesly's AI evidence engine independently acquires, parses, and reconciles a vehicle's financial reality. The driver does not log their day into Pesly; Pesly reads the record their day already left behind.</p>
+<h3>3.1 Data sources (in build order)</h3>
+<table>
+<tr><th>Source</th><th>What it proves</th><th>Channel</th><th>Status</th></tr>
+<tr><td>Platform statements (Uber, Bolt, Little)</td><td>Gross fares, trip counts, commissions, incentives per day</td><td>Gmail OAuth — app reads statement emails directly</td><td>Live (web)</td></tr>
+<tr><td>M-Pesa records</td><td>Payments sent/received, fuel purchases, bundle costs</td><td>Android app reads SMS with explicit user consent; interim: WhatsApp forwarding or photo</td><td>Android app — Phase 2</td></tr>
+<tr><td>Phone notifications</td><td>"30 bob bundles purchased," trip pings, payment alerts — the small leaks nobody records</td><td>Android notification-listener access, user-granted</td><td>Android app — Phase 2</td></tr>
+<tr><td>Receipts &amp; documents</td><td>Fuel, parking, servicing, police/county fees</td><td>Photo capture with AI OCR</td><td>Live (web, fallback)</td></tr>
+<tr><td>Phone sensors</td><td>Corroborates trips happened (movement patterns)</td><td>GPS/accelerometer — used only to corroborate, never as the sole source</td><td>Phase 3</td></tr>
+<tr><td>Official platform APIs</td><td>Direct platform income data</td><td>Not available to third parties in Kenya today — monitored</td><td>Deferred</td></tr>
+</table>
+<h3>3.2 What the AI does with it</h3>
+<ul>
+<li><b>Extraction:</b> raw statements, messages, and notifications are parsed into structured records — trips, fares, expenses by category (fuel, data/bundles, parking, maintenance).</li>
+<li><b>Evidence grading:</b> every figure receives a status — <i>Verified</i> (official statement), <i>Supported</i> (M-Pesa record), <i>Reported</i> (manual entry), <i>Estimated</i> (AI inference from patterns), <i>Disputed</i> (contested), <i>Reconciled</i> (cross-confirmed by 2+ sources).</li>
+<li><b>Cross-checking:</b> the engine reconciles machine sources against each other — statement total vs M-Pesa inflows vs notification trail — before a human ever sees a number.</li>
+<li><b>Explaining:</b> AI summarizes what happened in plain language for drivers and owners. It reports facts and flags anomalies as "requires review." It never accuses and never invents.</li>
+</ul>
+<h3>3.3 The driver's role changes — from clerk to beneficiary</h3>
+<p>Manual entry remains only as a fallback. The driver's actual interaction with Pesly becomes:</p>
+<ul>
+<li><b>Connect once:</b> link Gmail (and, with the Android app, grant SMS/notification access) with a single consent.</li>
+<li><b>Get the record:</b> see what the AI collected — automatically, daily.</li>
+<li><b>Dispute with evidence:</b> if the driver says "those aren't my numbers," Pesly shows the receipts behind each figure and logs the dispute. Reconciliation happens against evidence, not opinions.</li>
+</ul>
+<div class="callout"><b>Why this solves the problem nobody else solves:</b> the reconciliation engine no longer compares "what the driver claims" against "what the owner claims." It compares independent machine-gathered sources against each other, and gives both parties the same visible evidence. The argument stops being he-said-she-said and becomes a document on a screen.</div>
+
+<h2>4. Reconciliation Engine (V3)</h2>
+<p>The engine runs in three passes:</p>
+<ul>
+<li><b>Pass 1 — Source-to-source:</b> platform statement vs M-Pesa records vs notification trail, per day. Mismatches create "requires review" items automatically.</li>
+<li><b>Pass 2 — Pattern intelligence:</b> AI learns each vehicle's normal day (typical fuel spend per km, typical trip density, typical bundle spend) and flags statistical outliers — e.g. fuel spend 40% above the vehicle's own baseline.</li>
+<li><b>Pass 3 — Human resolution:</b> disputed items route to both driver and owner with the evidence attached. Resolution marks the figure <i>Reconciled</i> and feeds the baseline for future passes. Neither party edits history — resolutions are appended, versions preserved.</li>
+</ul>
+
+<h2>5. Business Model &amp; Monetization Analysis</h2>
+<h3>5.1 Owner subscriptions (core revenue — unchanged)</h3>
+<table>
+<tr><th>Tier</th><th>Fleet size</th><th>Price</th><th>Value delivered</th></tr>
+<tr><td>Starter</td><td>1–3 vehicles</td><td>KSh 400/vehicle/mo</td><td>Full reconciliation dashboard, alerts, history</td></tr>
+<tr><td>Growth</td><td>4–20 vehicles</td><td>KSh 350/vehicle/mo</td><td>+ fleet comparison, weekly reports</td></tr>
+<tr><td>Fleet</td><td>21–100</td><td>KSh 300/vehicle/mo</td><td>+ API access, finance exports</td></tr>
+<tr><td>Enterprise</td><td>100+</td><td>Custom</td><td>+ integrations, dedicated support</td></tr>
+</table>
+<h3>5.2 Should drivers now pay? (New analysis)</h3>
+<p>Previous versions kept drivers free because they did the work — free entry in exchange for their labor. V3 removes the labor: AI collects everything. The question becomes whether drivers will pay for a record they no longer have to build.</p>
+<table>
+<tr><th>Factor</th><th>Assessment</th></tr>
+<tr><td>Value without effort</td><td><b>Strongly improved.</b> A driver connects once and receives a verified earnings record automatically. The "free because you work" tradeoff is gone.</td></tr>
+<tr><td>Affordability</td><td>Typical Nairobi ride-hail drivers gross roughly KSh 60,000–180,000/month; KSh 100 is about two days of data bundles. Price is not the barrier — trust and habit are.</td></tr>
+<tr><td>AI operating cost</td><td>Parsing a driver's month of statements, messages, and receipts costs Pesly an estimated KSh 20–60 in AI processing. A KSh 100 fee covers it with margin; KSh 50 is marginal.</td></tr>
+<tr><td>Collection cost</td><td>M-Pesa business fees on a KSh 100 paybill collection are now minimal (Safaricom's 2026 tariff cuts; sub-KSh-200 rates near zero). Collection friction is manageable.</td></tr>
+<tr><td>Adoption risk</td><td><b>The critical constraint.</b> The two-sided model needs driver volume to make owner subscriptions valuable. A mandatory driver fee throttles data supply exactly when network effects matter most. Drivers burned by "typing job" scams also distrust anything that asks for money upfront.</td></tr>
+<tr><td>Churn cascade</td><td>If a driver stops paying, their vehicle goes dark — and the <i>paying</i> owner loses visibility. Mandatory driver fees let driver churn damage owner revenue.</td></tr>
+</table>
+<div class="dark-callout"><b>Recommendation: hybrid — free core, paid premium.</b><br><br>
+<b>Core (free forever):</b> account connection, automatic sync, daily earnings record, evidence view, dispute submission. This keeps driver adoption frictionless and data supply strong.<br><br>
+<b>Pesly Plus (KSh 100/month):</b> downloadable dispute evidence pack (PDF receipts organized for an owner confrontation or tribunal), verified income certificate (usable for loan and insurance applications), extended 12-month history, priority dispute resolution. At 5–10% conversion of active drivers, Plus becomes a high-margin second revenue line without ever gating the core.<br><br>
+<b>KSh 50 is rejected:</b> too low to signal premium value, marginal after AI costs, and it still triggers the same payment friction as KSh 100. If a driver will pay anything, they will pay 100.</div>
+
+<h2>6. Market &amp; Competition (unchanged, repositioned)</h2>
+<table>
+<tr><th>Player</th><th>What they do</th><th>Why Pesly differs</th></tr>
+<tr><td>RiderPal</td><td>Driver bookkeeping app, driver-paid</td><td>Self-reported claims; no reconciliation, no owner product. Pesly: AI-gathered evidence, both sides of the trust gap.</td></tr>
+<tr><td>Cartrack / TrackAlways</td><td>GPS telematics for fleets</td><td>Location data without financial truth. No driver product, no reconciliation.</td></tr>
+<tr><td>Onde</td><td>Dispatch software for operators</td><td>Serves companies launching their own ride-hailing, not individual owners and drivers.</td></tr>
+<tr><td>Argyle / Moove</td><td>Income data access (US/Nigeria)</td><td>Single-platform, API-based income verification. Moove's Nigeria model broke when Uber exited — proof that multi-source, evidence-first design is the durable architecture.</td></tr>
+</table>
+<p><b>Market size (top-down):</b> Kenya has roughly 40,000+ ride-hailing vehicles and several hundred thousand boda bodas. Every vehicle has an owner and a driver in a trust relationship. At a conservative 1% penetration of ride-hailing vehicles (400 vehicles) with an average owner subscription of KSh 350/vehicle/month, Pesly clears KSh 1.7M in annual recurring revenue before Plus conversions and boda expansion.</p>
+
+<h2>7. Product Architecture &amp; Current Build State</h2>
+<ul>
+<li><b>Live now (web app):</b> v2 data model (TripLog, FuelLog, Agreement, PrivacyGrant, Alert with evidence statuses), reconciliation display, agreement versioning engine, privacy center with driver-controlled grants, Gmail OAuth auto-sync for platform statements, AI smart-capture fallback (paste/photo/shorthand), emerald dark-mode design system.</li>
+<li><b>Next web pass:</b> automated reconciliation engine (auto-flagging), demo data seed, owner onboarding &amp; subscription screens, light/dark mode toggle (white-green light mode, emerald dark mode), logo on every page.</li>
+<li><b>Phase 2 — Android app:</b> M-Pesa SMS reading and notification-listener capture with explicit user consent screens. This unlocks the "reads even the 30-bob bundle purchase" capability that a web app cannot physically access.</li>
+<li><b>Phase 3 — WhatsApp channel:</b> drivers send photos/short texts to the Pesly WhatsApp number; AI parses them into their account without opening the app.</li>
+</ul>
+<p class="small">Note on honesty in product design: the web app will never pretend to read SMS or notifications. Those screens state plainly that automatic M-Pesa/notification sync arrives with the Android app. Trust is the product; faking capabilities destroys it.</p>
+
+<h2>8. Regulatory Position</h2>
+<p>Pesly is a financial intelligence and record-keeping tool. It is not a transport network company, does not dispatch, match, or carry passengers, and takes no commission from trips — so it does not trigger TNC licensing. Data access is consent-based per source (Gmail OAuth scope-limited to statements; Android SMS/notification permissions user-granted and revocable in-app at any time). Drivers control access grants beyond the owner's default boundary. Registration as a legal entity is deferred until a specific grant program (e.g. MEST Africa Challenge) requires it.</p>
+
+<h2>9. Risks &amp; Mitigations</h2>
+<table>
+<tr><th>Risk</th><th>Mitigation</th></tr>
+<tr><td>Platforms change statement email formats</td><td>Parser built with AI extraction (pattern-tolerant), not brittle regex; monitoring alerts on parse failures.</td></tr>
+<tr><td>Drivers decline to connect Gmail</td><td>Web MVP offers photo/paste fallback; the value visible in the free tier must be enough to justify one consent tap.</td></tr>
+<tr><td>Notification/SMS access seen as surveillance</td><td>Grant screens show exactly what is read, what is never read (personal chats), one-tap revoke, visible audit trail. The Privacy Center is a feature, not fine print.</td></tr>
+<tr><td>Owner-driver disputes escalate despite evidence</td><td>Dispute pack exports; neutral "requires review" language throughout; resolution history preserved for third parties (SACCOs, tribunals, lenders).</td></tr>
+<tr><td>AI parsing errors damage trust</td><td>Every parsed figure is reviewable and disputable by the driver before it becomes Reconciled; estimates are always labeled as estimates.</td></tr>
+</table>
+
+<h2>10. Roadmap</h2>
+<table>
+<tr><th>When</th><th>Milestone</th></tr>
+<tr><td>Sept 2026</td><td>Web MVP complete: Gmail sync, automated reconciliation, onboarding, dual-mode design; demo data seeded; app published live</td></tr>
+<tr><td>Oct–Dec 2026</td><td>Pilot: 3–5 vehicles in Nairobi (owner + driver pairs); measure sync reliability, dispute resolution rate; first paying owners</td></tr>
+<tr><td>Q1 2027</td><td>Android app beta: M-Pesa SMS + notification capture; Pesly Plus launch at KSh 100/month</td></tr>
+<tr><td>Q2 2027</td><td>WhatsApp capture channel; boda boda expansion; grant applications (MEST Africa Challenge)</td></tr>
+</table>
+
+<div class="dark-callout"><b>The one-line pitch for this version:</b><br>
+Pesly reads the receipts so nobody has to trust anybody. Owners finally see what the vehicle really earned; drivers finally hold proof of what it really cost — and the argument ends at the evidence.</div>
+
+<p class="small" style="margin-top:24pt">Pesly Business Plan v3 · September 2026 · Supersedes v2 (pesly-business-plan-v2.pdf) · Changes: AI-first evidence acquisition, driver-role redefinition, driver monetization analysis (hybrid free-core/Plus model), Android notification-capture roadmap, light/dark dual-mode design direction.</p>
+
+</body>
+</html>
