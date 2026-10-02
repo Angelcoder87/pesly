@@ -1,0 +1,12 @@
+{
+  "entity": "PrivacyGrant",
+  "description": "Per-source consent grant/revocation audit trail (Kenya Data Protection Act 2019). Entity live in app; schema per v3 spec (no records yet).",
+  "fields": {
+    "driver_id": {"type": "string", "ref": "Driver.id"},
+    "grant_type": {"type": "string", "enum": ["gmail", "mpesa_sms", "notifications", "photos"]},
+    "granted": {"type": "boolean"},
+    "granted_date": {"type": "string", "format": "datetime"},
+    "revoked_date": {"type": "string", "format": "datetime"},
+    "consent_wording": {"type": "string", "description": "exact wording shown when consent was given"}
+  }
+}

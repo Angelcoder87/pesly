@@ -1,0 +1,17 @@
+{
+  "entity": "Agreement",
+  "description": "Driver-owner terms. Every change creates a new versioned record; history is never overwritten.",
+  "fields": {
+    "vehicle_id": {"type": "string", "ref": "Vehicle.id"},
+    "driver_id": {"type": "string", "ref": "Driver.id"},
+    "owner_id": {"type": "string", "ref": "User.id"},
+    "type": {"type": "string", "enum": ["fixed_daily", "fixed_weekly", "percentage", "hybrid", "custom"]},
+    "amount_ksh": {"type": "number", "description": "fixed remittance amount (fixed/hybrid types)"},
+    "percentage": {"type": "number", "description": "commission share (percentage/hybrid types)"},
+    "effective_date": {"type": "string", "format": "date"},
+    "version": {"type": "number", "description": "monotonically increasing per vehicle+driver pair"},
+    "is_active": {"type": "boolean", "description": "only one version active at a time"},
+    "notes": {"type": "string", "description": "e.g. 'Updated after fuel price increase'"},
+    "is_demo": {"type": "boolean"}
+  }
+}

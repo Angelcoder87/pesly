@@ -16,6 +16,7 @@ Owners and drivers in Kenya's ride-hailing economy argue about money because eve
 - `pesly-legal-starter-pack.pdf` / `.html` — Terms of Service, Privacy Policy (DPA 2019 aligned), Owner Subscription Agreement, driver consent language, Driver–Owner Agreement template
 - `pitch_deck.html` — investor pitch deck (web)
 - `peslyPitch_function.ts` — deployed pitch deck backend function
+- `schema/` — the app data model as JSON: entities, evidence statuses, log sources, reconciliation design
 - `pesly_logo.png` / `Peslylogo.png` — brand assets
 
 ## Progress log

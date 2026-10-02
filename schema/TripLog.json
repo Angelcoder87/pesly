@@ -1,0 +1,22 @@
+{
+  "entity": "TripLog",
+  "description": "A single trip/platform earning with dual-source figures for reconciliation",
+  "fields": {
+    "vehicle_id": {"type": "string", "ref": "Vehicle.id"},
+    "driver_id": {"type": "string", "ref": "Driver.id"},
+    "day": {"type": "string", "format": "date"},
+    "logged_at": {"type": "string", "format": "datetime"},
+    "platform": {"type": "string", "enum": ["Uber", "Bolt", "Little", "Other"]},
+    "fare_ksh": {"type": "number", "description": "final accepted figure"},
+    "platform_reported_ksh": {"type": "number", "description": "from platform statement (AI-extracted)"},
+    "driver_reported_ksh": {"type": "number", "description": "driver's own report"},
+    "distance_km": {"type": "number"},
+    "duration_min": {"type": "number"},
+    "is_cash": {"type": "boolean"},
+    "log_source": {"type": "string", "enum": ["gmail_sync", "manual", "photo_ocr", "mpesa_sms", "estimated"]},
+    "evidence_status": {"type": "string", "enum": ["verified", "supported", "reported", "estimated", "disputed", "unverified", "reconciled"]},
+    "source_text": {"type": "string", "description": "raw evidence excerpt backing the figure"},
+    "dispute_notes": {"type": "string"},
+    "is_demo": {"type": "boolean"}
+  }
+}

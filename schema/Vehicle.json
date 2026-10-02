@@ -1,0 +1,13 @@
+{
+  "entity": "Vehicle",
+  "description": "A fleet vehicle linked to an owner and a driver",
+  "fields": {
+    "plate": {"type": "string", "required": true},
+    "make_model": {"type": "string"},
+    "driver_id": {"type": "string", "ref": "Driver.id"},
+    "owner_id": {"type": "string", "ref": "User.id"},
+    "monthly_fee_ksh": {"type": "number"},
+    "subscription_status": {"type": "string", "enum": ["active", "trial", "past_due", "cancelled"]},
+    "is_demo": {"type": "boolean"}
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "entity": "FuelLog",
+  "description": "Fuel and other operating expenses with evidence grading",
+  "fields": {
+    "vehicle_id": {"type": "string", "ref": "Vehicle.id"},
+    "driver_id": {"type": "string", "ref": "Driver.id"},
+    "day": {"type": "string", "format": "date"},
+    "logged_at": {"type": "string", "format": "datetime"},
+    "category": {"type": "string", "enum": ["fuel", "data", "maintenance", "parking", "other"]},
+    "amount_ksh": {"type": "number"},
+    "litres": {"type": "number"},
+    "log_source": {"type": "string", "enum": ["gmail_sync", "manual", "photo_ocr", "mpesa_sms", "estimated"]},
+    "evidence_status": {"type": "string", "enum": ["verified", "supported", "reported", "estimated", "disputed", "unverified", "reconciled"]},
+    "source_text": {"type": "string"},
+    "is_demo": {"type": "boolean"}
+  }
+}

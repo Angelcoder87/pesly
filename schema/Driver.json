@@ -1,0 +1,13 @@
+{
+  "entity": "Driver",
+  "description": "Driver account; authenticates by phone + PIN",
+  "fields": {
+    "name": {"type": "string", "required": true},
+    "phone": {"type": "string", "required": true},
+    "pin": {"type": "string", "note": "stored hashed in production"},
+    "joined_date": {"type": "string", "format": "date"},
+    "streak_count": {"type": "number", "description": "consecutive days logged"},
+    "linked_owner_code": {"type": "string", "description": "invite code to link to an owner's fleet"},
+    "is_demo": {"type": "boolean"}
+  }
+}
