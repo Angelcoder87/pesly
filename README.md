@@ -10,16 +10,26 @@ Owners and drivers in Kenya's ride-hailing economy argue about money because eve
 
 ## Repository contents
 
-- `pesly-business-plan-v3.pdf` — AI-first business plan (Sept 2026): evidence model, reconciliation engine, monetization analysis
-- `pesly-legal-starter-pack.pdf` — Terms of Service, Privacy Policy (DPA 2019 aligned), Owner Subscription Agreement, driver consent language, Driver–Owner Agreement template
+- `Pesly-Business-Plan-Sept-2026.docx` — current business plan (editable source)
+- `pesly-business-plan-v3.pdf` / `.html` — AI-first business plan (Sept 2026): evidence model, reconciliation engine, monetization analysis
+- `pesly-business-plan-v2.pdf` — earlier v2 plan (historical, shows the pivot to financial intelligence)
+- `pesly-legal-starter-pack.pdf` / `.html` — Terms of Service, Privacy Policy (DPA 2019 aligned), Owner Subscription Agreement, driver consent language, Driver–Owner Agreement template
 - `pitch_deck.html` — investor pitch deck (web)
 - `peslyPitch_function.ts` — deployed pitch deck backend function
 - `pesly_logo.png` / `Peslylogo.png` — brand assets
 
-## Status
+## Progress log
 
-- Web MVP: data model, Gmail auto-sync, evidence statuses, agreement engine, privacy center (built on Base44)
-- Roadmap: pilot (3–5 vehicles, Nairobi), Android app (M-Pesa SMS + notification capture), WhatsApp capture channel
+- **Oct 2026** — Futuristic UI rebuild completed (11 screens, light/dark emerald themes, logo system). Demo fleet seeded (3 vehicles, 3 drivers). Automated reconciliation engine live: platform vs driver figures cross-checked, discrepancies auto-flagged for review. Legal starter pack drafted for advocate review.
+- **Sept 2026** — Business plan v3 (AI-first data collection). Gmail OAuth statement ingestion + smart capture built. Evidence statuses across all entities. Agreement versioning + privacy grants.
+- **Aug–Sept 2026** — Concept validation, v2 pivot to financial intelligence, pitch deck deployed.
+
+## Roadmap
+
+1. Pilot: 3–5 vehicles, Nairobi (Nov–Dec 2026)
+2. First 10 paying owners (H1 2027)
+3. Android app: M-Pesa SMS + notification capture (Phase 2)
+4. WhatsApp capture channel
 
 ## Business model
 
