@@ -18,6 +18,7 @@ Owners and drivers in Kenya's ride-hailing economy argue about money because eve
 - `pitch_deck.html` — investor pitch deck (web)
 - `peslyPitch_function.ts` — deployed pitch deck backend function
 - `schema/` — the app data model as JSON: entities, evidence statuses, log sources, reconciliation design
+- `claude-code-build-prompt.md` — full Claude Code prompt pack to rebuild the app feature-for-feature in open code
 - `pesly_logo.png` / `Peslylogo.png` — brand assets
 
 ## Progress log
