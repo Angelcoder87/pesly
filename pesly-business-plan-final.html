@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pesly — Business Plan (Final, October 2026)</title>
+<style>
+  @page { size: A4; margin: 2cm; }
+  body { font-family: Georgia, 'Times New Roman', serif; color: #1a2e22; line-height: 1.6; max-width: 780px; margin: 0 auto; padding: 40px 20px; }
+  .cover { text-align: center; padding: 80px 20px; page-break-after: always; }
+  .cover h1 { font-size: 52px; color: #065f46; margin-bottom: 5px; letter-spacing: -1px; }
+  .cover .tagline { font-size: 20px; color: #047857; font-style: italic; margin-top: 0; }
+  .cover .sub { margin-top: 60px; font-size: 15px; color: #4b5563; }
+  .cover .meta { margin-top: 20px; font-size: 13px; color: #6b7280; }
+  h2 { color: #065f46; border-bottom: 2px solid #10b981; padding-bottom: 6px; margin-top: 40px; font-size: 22px; page-break-after: avoid; }
+  h3 { color: #047857; font-size: 17px; margin-top: 26px; page-break-after: avoid; }
+  p { margin: 12px 0; }
+  blockquote { border-left: 4px solid #10b981; margin: 18px 0; padding: 8px 18px; background: #ecfdf5; font-style: italic; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+  th { background: #065f46; color: white; padding: 8px 10px; text-align: left; }
+  td { border: 1px solid #d1d5db; padding: 8px 10px; }
+  .status-chip { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-family: Arial, sans-serif; }
+  .ver { background: #d1fae5; color: #065f46; } .flag { background: #fef3c7; color: #92400e; }
+  .footnote { font-size: 13px; color: #6b7280; }
+  .toc { background: #f0fdf4; border: 1px solid #a7f3d0; padding: 16px 26px; border-radius: 8px; }
+  .toc p { margin: 4px 0; font-family: Arial, sans-serif; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Pesly</h1>
+  <p class="tagline">The money never lies. Now everybody can see it.</p>
+  <p class="sub"><strong>Financial Intelligence for Vehicle-Based Work</strong><br>Final Business Plan — v4</p>
+  <p class="meta">Prepared by Angela Odhiambo · Nairobi, Kenya · October 2026<br>
+  Owner of record: Pesly (sole proprietorship, registration in progress)</p>
+</div>
+
+<div class="toc">
+<p><strong>Contents</strong></p>
+<p>1. The Problem: A Broken Trust Economy</p>
+<p>2. The Solution: Evidence, Not Accusations</p>
+<p>3. How Pesly Collects the Truth</p>
+<p>4. The Evidence Model</p>
+<p>5. The Reconciliation Engine</p>
+<p>6. The Agreement Engine</p>
+<p>7. The Trust Architecture (Why Drivers Join)</p>
+<p>8. Business Model</p>
+<p>9. Market & Competition</p>
+<p>10. The Pilot Plan</p>
+<p>11. Legal Foundation</p>
+<p>12. Technology Status & Roadmap</p>
+<p>13. Risks & Honest Answers</p>
+<p>14. What We Need Next</p>
+</div>
+
+<h2>1. The Problem: A Broken Trust Economy</h2>
+<p>Kenya's ride-hailing economy runs on an unspoken arrangement: an owner supplies the vehicle, a driver supplies the labour, and a fixed daily or weekly remittance travels between them. But the arrangement is built on numbers nobody can verify.</p>
+<p>The owner sees what the platform reports — sometimes. The driver knows what they actually earned — and actually spent. Fuel prices move, commissions shift, cash trips vanish from records, payments reverse overnight. Between those two views sits a gap, and inside that gap lives the single largest source of conflict in the industry: <em>the money argument.</em></p>
+<p>It goes like this. The owner says: "You made more, remit more." The driver says: "You don't know my costs, my empty kilometres, my fuel, the three days this car sat in the garage." Both are telling the truth as they see it. Neither can prove anything. The argument repeats weekly, corrodes the relationship, and in the worst cases the driver quietly leaves with the owner's vehicle — or the owner quietly cuts the driver off from an income.</p>
+<blockquote>"Pesly does not create this conflict. The money gap creates it. Pesly only decides whether it is fought with evidence or with shouting."</blockquote>
+<p>The scale is real: Nairobi is one of the largest ride-hailing markets in Africa, with tens of thousands of vehicles operating under owner-driver arrangements. Every one of those pairings is a monthly money argument waiting for an honest referee.</p>
+
+<h2>2. The Solution: Evidence, Not Accusations</h2>
+<p>Pesly is an AI-first financial intelligence layer for vehicle-based work. Its core philosophy is a pipeline:</p>
+<p><strong>Collect evidence → Reconcile reality → Explain it → Create intelligence.</strong></p>
+<p>Unlike every bookkeeping app on the market, Pesly does not ask the driver to be its data-entry clerk. The AI is the primary data collector. It reads the same platform statements the owner could read, the same M-Pesa records the driver lives by, and it grades every figure by how it was obtained. When the driver <em>does</em> speak, they speak with evidence attached — and when they are wrongly accused, the record defends them.</p>
+<p>Pesly is deliberately not a transport company, not a dispatch platform, and not a surveillance product. It is the trusted layer between two people who need to trust each other and currently cannot.</p>
+
+<h2>3. How Pesly Collects the Truth</h2>
+<table>
+<tr><th>Source</th><th>How it works</th><th>Status</th></tr>
+<tr><td>Platform statements (Uber, Bolt, Little)</td><td>Gmail OAuth: with the driver's consent, Pesly reads the platform's own statement emails and ingests every trip</td><td><span class="status-chip ver">LIVE</span></td></tr>
+<tr><td>M-Pesa records</td><td>Phase 2 native Android app reads SMS with consent; interim: drivers forward M-Pesa confirmations to the Pesly WhatsApp number</td><td><span class="status-chip flag">PHASE 2 / INTERIM</span></td></tr>
+<tr><td>Receipts</td><td>Photo capture with OCR — fuel, service, data bundles</td><td><span class="status-chip flag">FALLBACK</span></td></tr>
+<tr><td>Driver entry</td><td>Manual logging remains available as a small fallback, never the primary path</td><td><span class="status-chip flag">FALLBACK</span></td></tr>
+<tr><td>Phone sensors (GPS)</td><td>Used only to corroborate trips, never to track people</td><td><span class="status-chip flag">PHASE 2</span></td></tr>
+</table>
+<p>Smart deduplication prevents the same trip being counted twice when it appears in multiple sources.</p>
+
+<h2>4. The Evidence Model</h2>
+<p>Every figure in Pesly carries two attributes: <strong>where it came from</strong> (log source) and <strong>how much it can be trusted</strong> (evidence status). No number appears in the app naked.</p>
+<p><strong>Log sources:</strong> gmail_sync · mpesa_sms · photo_ocr · manual · estimated</p>
+<p><strong>Evidence statuses:</strong> Verified · Supported · Reported · Estimated · Disputed · Unverified · Reconciled</p>
+<p>A platform-statement figure is <em>Verified</em>. A driver's say-so is <em>Reported</em>. When the machine sources agree with each other, the figure becomes <em>Reconciled</em> — the only status both parties can fully rely on. When they disagree, the figure is flagged <em>Disputed</em> and enters the review queue with the raw evidence text attached (source_text), so any reviewer can see exactly what the claim is based on.</p>
+
+<h2>5. The Reconciliation Engine</h2>
+<p>The engine continuously cross-checks three independent views of the same money: <strong>what the platform reported</strong>, <strong>what the driver reported</strong>, and <strong>what M-Pesa actually moved</strong>. Mismatches automatically generate review alerts.</p>
+<p>This is not a hypothetical feature. The engine is built and running in the current web app against seeded demo data, and it has already produced alerts of exactly this form:</p>
+<blockquote>"KSh 2,044 discrepancy on 2026-09-04 for KCA 234B: platform reported KSh 3,684, driver reported KSh 5,728. — Requires review."</blockquote>
+<p>Two design rules are absolute: the engine <strong>never accuses</strong> — it flags for human review, always in neutral language; and it <strong>works in both directions</strong> — it catches the forgotten remittance and the delayed platform payout with equal indifference. Most discrepancies turn out to be honest: a payment reversal, an unremitted cash trip, a late weekly statement. When the explanation is visible, an ugly weekly fight becomes a five-minute "oh, that's what happened."</p>
+
+<h2>6. The Agreement Engine</h2>
+<p>Most disputes are not about the numbers at all — they are about <em>which numbers the deal applies to</em>. Pesly encodes the owner-driver agreement itself:</p>
+<table>
+<tr><th>Type</th><th>Example</th></tr>
+<tr><td>Fixed daily / weekly</td><td>KSh 1,800 per day, remitted daily</td></tr>
+<tr><td>Percentage</td><td>30% of gross weekly fares</td></tr>
+<tr><td>Hybrid</td><td>KSh 1,500 base + 15% above KSh 6,000 gross</td></tr>
+<tr><td>Custom</td><td>Free-form terms with version notes</td></tr>
+</table>
+<p>Every change creates a new versioned record — history is never overwritten. "We agreed 1,500" ends the day both sides can see Version 2, effective 1 September, signed by both, with the note: <em>"Updated after fuel price increase."</em></p>
+
+<h2>7. The Trust Architecture</h2>
+<h3>7.1 The central risk</h3>
+<p>The single greatest product risk is not technical — it is that drivers experience Pesly as <em>the owner's surveillance app</em>. If they do, they will refuse to connect their accounts, the data never arrives, and the product dies from the driver side. This plan treats that risk as the primary design constraint, not a footnote.</p>
+<h3>7.2 Consent-default-private</h3>
+<p>The driver, not the owner, controls the data boundary. On connect, the driver chooses — source by source — what flows to the owner (PrivacyGrant, an auditable consent trail aligned with the Kenya Data Protection Act 2019). The default share is only what the agreement needs: the remittance-relevant summary. Full trip detail, personal patterns, and spending outside the agreement stay the driver's unless they grant more. A driver who connects nothing shares nothing — which forces owners to <em>sell</em> Pesly to drivers as a benefit, not mandate it as a condition.</p>
+<h3>7.3 The owner sees the driver's costs too</h3>
+<p>Transparency is deliberately two-sided. In most Kenyan arrangements the owner already owns the platform account and sees the statements — what they never see is the driver's side: fuel, data, damages, idle days. Pesly shows both sides the same reconciled picture. Owners who discover costs they never accounted for renegotiate with facts instead of suspicion.</p>
+<h3>7.4 What the driver gets</h3>
+<p>Free, forever: their own complete financial record — true net earnings after every deduction, fuel costs, remittance history, dispute record, agreement versions. Plus one thing they cannot get anywhere else: a <strong>verified income certificate</strong> backed by machine evidence — accepted where a driver's word is not.</p>
+<p>The driver pitch in one line: <em>"The owner already sees what Bolt sends them. Pesly is the only place that shows your side — and proves it."</em></p>
+<h3>7.5 Who we accept losing</h3>
+<p>Honesty about who the product is not for: the driver quietly pocketing an extra KSh 1,500 a day will resist, and Pesly will lose them. The product is for the honest driver getting accused anyway — and there are far more of those. The onboarding rule follows from it: pilots run with owner-driver pairs who already have decent relationships, so the first experience of Pesly is a peace treaty, not a sting operation.</p>
+
+<h2>8. Business Model</h2>
+<table>
+<tr><th>Side</th><th>Offer</th><th>Price</th></tr>
+<tr><td>Drivers</td><td>Core: full financial record, dispute defence, evidence trail</td><td>Free, forever</td></tr>
+<tr><td>Drivers</td><td>Pesly Plus: dispute evidence pack, verified income certificate, 12-month history</td><td>KSh 100/month</td></tr>
+<tr><td>Owners</td><td>Fleet intelligence: verified earnings per vehicle, reconciliation alerts, agreement management, review queue</td><td>KSh 300–500/vehicle/month (target KSh 400; fleet discounts)</td></tr>
+<tr><td>Lenders / insurers</td><td>Consent-based verified income data (driver opts in per application)</td><td>Phase 2 only, never before trust is proven</td></tr>
+</table>
+<p>Why free core: the product's raw material is driver trust. Charging drivers to prove their own honesty would be self-defeating — the free tier is a customer-acquisition cost, not a missed revenue line. KSh 50 was evaluated and rejected as a Plus price: too low to signal value and marginal after AI processing costs. KSh 100 keeps the tier meaningful without gate-keeping dispute defence — which is the feature that wins drivers, and is therefore free.</p>
+<p>Owner subscriptions remain the core revenue engine. The unit economics are attractive because AI does the collection labour: there is no bookkeeper on the payroll of either side.</p>
+
+<h2>9. Market & Competition</h2>
+<table>
+<tr><th>Player</th><th>What they do</th><th>What they miss</th></tr>
+<tr><td>RiderPal</td><td>Driver bookkeeping app</td><td>Self-reported only; no reconciliation, no owner product</td></tr>
+<tr><td>Cartrack / TrackAlways</td><td>GPS telematics for fleets</td><td>Tracks vehicles, not money; no financial reconciliation, nothing for the driver</td></tr>
+<tr><td>Onde</td><td>Ride-hailing dispatch software</td><td>Serves platforms, not owner-driver relationships</td></tr>
+<tr><td>Moove / Argyle</td><td>Income data & vehicle financing</td><td>Single-platform, adjacent markets; Moove's Nigeria model broke when Uber exited</td></tr>
+<tr><td><strong>Pesly</strong></td><td><strong>Evidence-graded financial reconciliation between owners and drivers</strong></td><td><strong>— the only layer that ends the money argument</strong></td></tr>
+</table>
+<p>Regulatory position: Pesly deliberately operates as an intelligence layer — not a transport network company — and structures its data practices for the Kenya Data Protection Act 2019 from day one.</p>
+
+<h2>10. The Pilot Plan</h2>
+<p><strong>Target: 3–5 vehicles, Nairobi, live by end of November 2026.</strong></p>
+<p>Selection criteria for pilot fleets:</p>
+<p>1. Owner-driver pairs with an existing working relationship (the trust constraint from §7)<br>
+2. Vehicles on Bolt, Uber or Little with statement emails (the live data path)<br>
+3. Owners willing to charge nothing during the pilot in exchange for shaping the product</p>
+<p>Success metrics over 8 weeks:</p>
+<table>
+<tr><th>Metric</th><th>Target</th></tr>
+<tr><td>Driver opt-in rate (accounts connected, consent granted)</td><td>&gt; 70%</td></tr>
+<tr><td>Reconciliation coverage (figures auto-reconciled without human input)</td><td>&gt; 80%</td></tr>
+<tr><td>Money arguments resolved with the record in-argument</td><td>Every flagged case</td></tr>
+<tr><td>Owner willingness to pay at pilot end</td><td>&gt; 2 of 3 owners convert</td></tr>
+</table>
+<p>A 60-second driver test precedes everything: pitch Pesly to real Bolt drivers in person and record their first question. Their reaction is the earliest possible signal on §7 — and it is free.</p>
+
+<h2>11. Legal Foundation</h2>
+<p>Completed (October 2026): a full legal starter pack — Terms of Service, Privacy Policy aligned to the Kenya Data Protection Act 2019, Owner Subscription Agreement, driver consent language, and a Driver-Owner Agreement template — drafted for review by a Kenyan advocate before commercial launch.</p>
+<p>Structure: sole proprietorship for the pilot phase; incorporation as Pesly Ltd before scaling beyond pilot. This keeps pilot costs minimal while never operating outside the law.</p>
+
+<h2>12. Technology Status & Roadmap</h2>
+<p><strong>Working today (web app):</strong> the full data model — TripLog, FuelLog, Agreement, PrivacyGrant, Alert — with evidence statuses and dual-source figures; Gmail OAuth statement ingestion with smart deduplication; the reconciliation engine, live and already flagging discrepancies in demo data; agreement versioning; the review-queue alert system; an 11-screen interface in light (white + green) and dark (emerald) themes with the Pesly brand system; a seeded demo fleet of 3 vehicles and 3 drivers.</p>
+<table>
+<tr><th>Phase</th><th>What ships</th><th>When</th></tr>
+<tr><td>Publish & pilot</td><td>Live web link, pilot fleets onboarded, WhatsApp number for M-Pesa forwarding</td><td>Nov 2026</td></tr>
+<tr><td>Payments</td><td>M-Pesa paybill for owner subscriptions and Pesly Plus</td><td>Dec 2026</td></tr>
+<tr><td>Android app</td><td>Native app: M-Pesa SMS parsing and (with explicit consent) notification capture — the end of manual forwarding</td><td>H1 2027</td></tr>
+<tr><td>Data products</td><td>Consent-based verified income for lenders/insurers</td><td>Only after trust is proven</td></tr>
+</table>
+
+<h2>13. Risks & Honest Answers</h2>
+<table>
+<tr><th>Risk</th><th>Honest answer</th></tr>
+<tr><td>Drivers reject it as surveillance</td><td>The design constraint of the whole product (§7). Consent-default-private, driver-first value, pilot with trusting pairs. Some drivers will still refuse — we accept losing the drivers whose income depends on the gap.</td></tr>
+<tr><td>Owners weaponize transparency in renegotiation</td><td>The data boundary limits what owners see without grants; costs flow to owners as visibly as earnings, rebalancing the information asymmetry rather than widening it.</td></tr>
+<tr><td>Platforms change statement formats or APIs</td><td>Multi-source design means no single point of failure; the evidence model degrades gracefully (a broken parser yields Unverified, not false certainty).</td></tr>
+<tr><td>M-Pesa access needs an Android app</td><td>True — SMS cannot be read by a web app. The WhatsApp-forwarding interim keeps the pilot viable without native development.</td></tr>
+<tr><td>Trust cold-start: owners don't believe an app over their driver</td><td>The engine never asks them to. It shows machine-extracted evidence with sources attached — the same statements the owner could request, already read.</td></tr>
+</table>
+
+<h2>14. What We Need Next</h2>
+<p>1. Publish the web app and onboard the first pilot owner (the pilot begins with one trusting pair, not five)<br>
+2. Advocate review of the legal pack, and sole proprietorship registration<br>
+3. The 60-second driver test — real reactions from real Bolt drivers this month<br>
+4. M-Pesa paybill setup before the first subscription is charged<br>
+5. After the pilot proves the metrics in §10: incorporation, and the Android build</p>
+
+<hr>
+<p class="footnote">Pesly · Financial intelligence for vehicle-based work · Founded by Angela Odhiambo, Nairobi.<br>
+This document supersedes the v2 (financial intelligence pivot) and v3 (AI-first data collection) plans. The product described here is live in developer preview; the reconciliation engine output quoted in §5 is real output from the running system.</p>
+
+</body>
+</html>
